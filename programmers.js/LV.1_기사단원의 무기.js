@@ -4,7 +4,7 @@
  * @param {Number} power
  * @returns {number} 각 수의 소수의 개수 (개수가 limit 이상을 넘어가면 power로 대체)
  */
-function solution(number, limit, power) {
+function weapon(number, limit, power) {
   return Array.from({ length: number }, (_, idx) => idx + 1)
     .map((item) => (getPrime(item) > limit ? power : getPrime(item)))
     .reduce((acc, cur) => acc + cur, 0);
