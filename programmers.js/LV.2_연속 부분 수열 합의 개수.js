@@ -7,7 +7,7 @@
  * @param {number[]} elements
  * @returns {number}
  */
-function solution(elements) {
+function circle_sequence(elements) {
   const len = elements.length;
   const circle = [...elements, ...elements];
   const answer = new Set();
