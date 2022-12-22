@@ -2,6 +2,7 @@
  * 20124. 모르고리즘 회장님 추천 받습니다.
  *
  * 작성자: seongminn
+ * 난이도: Bronze 2
  * 언어: node.js
  * 사용 메모리: 51,272 KB
  * 소요 시간: 628 ms
@@ -9,7 +10,7 @@
  */
 
 const fs = require('fs');
-const input = fs.readFileSync('/dev/stdin').toString().split('\n');
+const input = fs.readFileSync('input.txt').toString().split('\n');
 
 const arr = input.slice(1).map((item) => item.split(' '));
 arr.sort((a, b) => {
