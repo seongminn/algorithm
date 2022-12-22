@@ -10,7 +10,7 @@
  */
 
 const fs = require('fs');
-const input = fs.readFileSync('ex.txt').toString().split('\n');
+const input = fs.readFileSync('input.txt').toString().split('\n');
 
 input.forEach((str) => {
   if (str[0] === '*') return;
