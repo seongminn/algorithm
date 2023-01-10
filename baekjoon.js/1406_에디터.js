@@ -6,7 +6,7 @@
  * 언어: node.js
  * 사용 메모리: 104,672 KB
  * 소요 시간: 584 ms
- * 해결 날짜: 2022년 1월 3일
+ * 해결 날짜: 2022년 1월 9일
  */
 
 const input = require('fs').readFileSync('input.txt').toString().split('\n');
