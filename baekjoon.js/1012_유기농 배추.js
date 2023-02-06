@@ -16,7 +16,7 @@ const dys = [1, 0, -1, 0];
 
 for (let t = 0; t < tc; t++) {
   const [m, n, k] = input.shift().split(' ').map(Number);
-  const graph = Array.from({ length: n }, () =>
+  const field = Array.from({ length: n }, () =>
     Array.from({ length: m }, () => 0)
   );
   let cnt = 0;
@@ -24,12 +24,12 @@ for (let t = 0; t < tc; t++) {
   for (let i = 0; i < k; i++) {
     const [x, y] = input.shift().split(' ').map(Number);
 
-    graph[y][x] = 1;
+    field[y][x] = 1;
   }
 
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < m; j++) {
-      if (graph[i][j] === 1) {
+      if (field[i][j] === 1) {
         search(j, i);
         cnt++;
       }
@@ -43,24 +43,13 @@ for (let t = 0; t < tc; t++) {
   }
 
   function search(x, y) {
-    graph[y][x] = 2;
+    field[y][x] = 2;
 
     for (let d = 0; d < 4; d++) {
       const nx = x + dxs[d];
       const ny = y + dys[d];
 
-      if (in_range(nx, ny) && graph[ny][nx] === 1) search(nx, ny);
+      if (in_range(nx, ny) && field[ny][nx] === 1) search(nx, ny);
     }
   }
 }
-
-// [
-//   [1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-//   [0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-//   [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-//   [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-//   [0, 0, 1, 1, 0, 0, 0, 1, 1, 1],
-//   [0, 0, 0, 0, 1, 0, 0, 1, 1, 1],
-//   [0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
-//   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-// ];
