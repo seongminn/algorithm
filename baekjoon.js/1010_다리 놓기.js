@@ -1,3 +1,14 @@
+/**
+ * 1010. 다리 놓기
+ *
+ * 작성자: seongminn
+ * 난이도: Silver 5
+ * 언어: node.js
+ * 사용 메모리: 10,528 KB
+ * 소요 시간: 156 ms
+ * 해결 날짜: 2023년 8월 18일
+ */
+
 const filePath = process.platform === 'linux' ? '/dev/stdin' : 'input.txt';
 const inputs = require('fs').readFileSync(filePath).toString().split('\n');
 
